@@ -18,16 +18,21 @@ GET http://localhost:8080/Info/bookauthors
 -> By using the bookauthor get api, we can get information about which book is written by which author.
 
 
+
 DELETE->
 DELETE http://localhost:8080/Delete/delete-book?Name=Pride_and_Prejudic   
+
 -> Here If we want to delete a book from the database then we have give the book name as input. Then if the book would not exist then it will give response "Book does not exists". If the book exists in the database then it will look for the author name and if the author has written only this book then the book along with its author will get deleted from their respective tables.
+
 
 
 POST->
 POST http://localhost:8080/Insert/Insert-book?Name=Pride and Prejudice&author_name=Jane Austen&city_name=USA 
+
 -> Here we will give the book name, author name, city name as input.
 -> then if same book exists then it will not store it again otherwise will create a new entry.
 -> If the author has already a book under his name in the library then a new entry for the author will not created, the same authorid will get associated with the new book's Id.
+
 
 
 POST http://localhost:8080/Update/Update-book?bookname=The Great Gatsby&correct=The Great Gatsby
@@ -35,9 +40,11 @@ POST http://localhost:8080/Update/Update-book?bookname=The Great Gatsby&correct=
 -> if the book name is incorrect then we can use update-book and type the incorrect book name and the correct book name for changing them. If both the names which are entered are same then it will give response as same names given and if the incorrect name does not exists in the table then it will give result as no such book and in the last case it will change the book name.
 
 
+
 POST http://localhost:8080/Update/Update-Author_name?incorrect=Jane_Austen&correct=Jane Austen
 
 ->  if the author name is incorrect then in the same manner as book name it can be changed and the responses remain same as above.
+
 
 
 POST http://localhost:8080/Update/Update-Author_city?authorname=Jane Austen&cityname=USA
