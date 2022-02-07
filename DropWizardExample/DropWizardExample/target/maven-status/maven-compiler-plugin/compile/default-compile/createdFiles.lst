@@ -1,7 +1,7 @@
 database\DBUtil.class
-com\howtodoinjava\rest\App.class
 database\Main.class
 database\Insert.class
+com\Dropwizard\rest\App.class
 database\Delete.class
 database\Info.class
 database\Update.class

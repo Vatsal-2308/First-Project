@@ -49,7 +49,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.howtodoinjava.rest.App</mainClass>
+                  <mainClass>com.Dropwizard.rest.App</mainClass>
                 </transformer>
                 <transformer />
               </transformers>
