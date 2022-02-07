@@ -8,11 +8,13 @@ The urls for the operation are:-
 
 Delete:-
 https://www.getpostman.com/collections/57d757c1a47b764d4768
+
 Here If we want to delete a book from the database then we have give the book name as input. Then if the book would not exist then it will give response "Book does not exists". 
 If the book exists in the database then it will look for the author name and if the author has written only this book then the book along with its author will get deleted from their respective tables.
 
 Update:-
 https://www.getpostman.com/collections/b3659c43452803461524
+
 Here there are three query:-
 1) if the book name is incorrect then we can use update-book and type the incorrect book name and the correct book name for changing them. If both the names which are entered are same then it will give response as same names given
 and if the incorrect name does not exists in the table then it will give result as no such book and in the last case it will change the book name.
