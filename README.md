@@ -31,14 +31,17 @@ POST http://localhost:8080/Insert/Insert-book?Name=Pride and Prejudice&author_na
 
 
 POST http://localhost:8080/Update/Update-book?bookname=The Great Gatsby&correct=The Great Gatsby
+
 -> if the book name is incorrect then we can use update-book and type the incorrect book name and the correct book name for changing them. If both the names which are entered are same then it will give response as same names given and if the incorrect name does not exists in the table then it will give result as no such book and in the last case it will change the book name.
 
 
 POST http://localhost:8080/Update/Update-Author_name?incorrect=Jane_Austen&correct=Jane Austen
+
 ->  if the author name is incorrect then in the same manner as book name it can be changed and the responses remain same as above.
 
 
 POST http://localhost:8080/Update/Update-Author_city?authorname=Jane Austen&cityname=USA
+
 -> if we want to change the author country then the third url can be used where we have to give author name as input and country name as another input and the name will be changes if the author name exists and if it does not exists then will show no such author.
 
 
