@@ -1,4 +1,4 @@
-# First-Project
+# Library-Management
 -> Here in this project I have took a library database which has 3 tables. First table is of Authors where it has information about the author name, author city and author ID. Second table is of books Which has two columns of bookId and book name. The third is a relation of both of them where it has authorId and BookId in it for making a connection between book and author.
 
 -> I have used dropwizard framework for implementing jersey and jetty and all the related code can be found in the repository.
@@ -17,6 +17,20 @@ GET http://localhost:8080/Info/authors
 GET http://localhost:8080/Info/bookauthors     
 -> By using the bookauthor get api, we can get information about which book is written by which author.
 
+GET http://localhost:8080/Info/authorfrombook?bookname=The Great Gatsby
+->In this api we have to give the bookname as input and in return it would give us the author name as output and if the book would not exists then will give a message of book does not exists.
+
+GET http://localhost:8080/Info/bookfromauthor?authorname=J.D. Salinger
+-> Here we have to give the author name as input and in return we will get all the books written by him as output and if there are no books under his name then it will give a message that author name does not exists.
+
+GET http://localhost:8080/Info/country?name=USA
+-> Here we have to give the country as input and we will get all the authors from that country and if there are no authors from the country then it will display that no authors from the country.
+
+GET http://localhost:8080/Info/author_exists?name=Jane Austen
+-> Here by giving the author name as input we can check whether the author name exists or not.
+
+GET http://localhost:8080/Info/book_exists?name=The Catcher in the Rye
+-> We can use this api if we are searching for a specific book in the library as here we can give the book name as input and it will show whether it exists or not.
 
 
 DELETE->
