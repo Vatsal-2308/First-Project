@@ -1,0 +1,20 @@
+CREATE TABLE Authors (
+    Id INT NOT NULL AUTO_INCREMENT,
+    Name VARCHAR(70) NOT NULL,
+    Country VARCHAR(100) NOT NULL,
+    PRIMARY KEY(Id)
+);
+
+CREATE TABLE Books (
+    Id INT NOT NULL AUTO_INCREMENT,
+    Title VARCHAR(50) NOT NULL,
+    PRIMARY KEY(Id)
+);
+
+CREATE TABLE BooksAuthors (
+    AuthorId INT NOT NULL,
+    BookId  INT NOT NULL,
+    FOREIGN KEY (AuthorId) REFERENCES Authors(Id),
+    FOREIGN KEY (BookId) REFERENCES Books(Id)
+);
+
