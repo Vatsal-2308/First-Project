@@ -27,10 +27,8 @@ public class App extends Application<Configuration> {
 		LOGGER.info("Registering REST resources");
 		
 
-		e.jersey().register(new Info());
-		e.jersey().register(new Delete());
-		e.jersey().register(new Insert());
-		e.jersey().register(new Update());
+		e.jersey().register(new Books());
+		e.jersey().register(new Author());
 		final Client client = new JerseyClientBuilder(e)
 				.build("DemoRESTClient");
 
