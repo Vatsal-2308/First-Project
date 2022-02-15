@@ -1,4 +1,4 @@
-package database;
+package com.library_management.rest;
 
 
 
@@ -18,9 +18,7 @@ import java.util.HashMap;
 public class Author {
 
 
-    // This function is used to show all the books in the library.
-
-
+    // This function is used to get all the books written by the author
     @GET
     @Path("/bookfromauthor")
     @Produces(MediaType.APPLICATION_JSON)
@@ -81,9 +79,9 @@ public class Author {
 
 
 
+
     @GET
     @Path("/authors_table")
-
     @Produces(MediaType.APPLICATION_JSON)
     // This function is used to show all the authors name and their country of origin.
     public Response authors() throws SQLException
@@ -111,6 +109,7 @@ public class Author {
 
 
 
+    //This function is used to show all the authors which are from a particular country.
     @GET
     @Path("/country")
     @Produces(MediaType.APPLICATION_JSON)
@@ -146,6 +145,8 @@ public class Author {
 
 
 
+
+    //This function is used to check if a author name exists in the database or not.
     @GET
     @Path("/author_exists")
     @Produces(MediaType.APPLICATION_JSON)

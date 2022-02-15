@@ -1,4 +1,4 @@
-package database;
+package com.library_management.rest;
 
 
 
@@ -73,12 +73,15 @@ public class Books {
 		return Response.status(200).entity("Book Name Changed!!! ").build();
 
 	}
+
+
+
+
+
+
 	// This function is used to show all the books in the library.
-
-
 	@GET
 	@Path("/books_table")
-
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response books() throws SQLException
 	{
@@ -105,6 +108,8 @@ public class Books {
 
 
 
+
+	//This function is used to get the author name from the book name.
 	@GET
 	@Path("/authorfrombook")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -169,7 +174,6 @@ public class Books {
 
 	@GET
 	@Path("/bookauthors")
-
 	@Produces(MediaType.APPLICATION_JSON)
 	// This function is used to show books along with their author name.
 	public Response bookauthors() throws SQLException
@@ -195,6 +199,8 @@ public class Books {
 
 
 
+
+	//This function is used to check if a particular book exists or not in the library.
 	@GET
 	@Path("/book_exists")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -222,9 +228,10 @@ public class Books {
 
 
 
+
+	//This function is used to delete a book from the database.
 	@DELETE
 	@Path("/delete-book")
-
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response delete_book(@com.sun.istack.NotNull
 								@QueryParam("Name") String Name) throws SQLException
@@ -311,6 +318,8 @@ public class Books {
 
 
 
+
+	//This function is used to insert a book in the database.
 	@POST
 	@Path("/Insert-book")
 	public Response books(@NotNull

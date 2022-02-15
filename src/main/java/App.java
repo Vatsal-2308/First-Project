@@ -1,17 +1,15 @@
-package database;
-
+import com.library_management.rest.Author;
+import com.library_management.rest.Books;
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.client.JerseyClientBuilder;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-
-import javax.ws.rs.client.Client;
-
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.ws.rs.client.Client;
 
 
 public class App extends Application<Configuration> {
